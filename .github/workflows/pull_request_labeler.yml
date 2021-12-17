@@ -17,6 +17,6 @@ jobs:
           s_max_size: '100'
           m_max_size: '500'
           l_max_size: '1000'
-          exclude_files: "(?<extention>.txt|.gen.go|.md)$"
+          exclude_files: "(?<extention>.txt|.gen.go|.md|go.sum|go.mod)$"
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
