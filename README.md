@@ -1,0 +1,1 @@
+# go-labeler-sample
