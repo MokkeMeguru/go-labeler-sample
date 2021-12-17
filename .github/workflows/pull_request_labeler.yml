@@ -1,13 +1,22 @@
-name: check-pr-size
-on: [pull_request]
+name: pr-labeler
+
+on:
+  pull_request:
+    branches:
+      - main
+  types: [open, synchronize, reopened]
+
 jobs:
-  check-pr-size:
-    name: check-pr-size
+  pr-labeler:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.base.ref == "main"
+    name: Label the PR size
     steps:
-      - uses: actions/checkout@v2
-      - uses: budougumi0617/action-pr-size-checker@v0
+      - uses: coverwallet/pr-labeler@v1.2.1
         with:
-          github_token: ${{ secrets.github_token }}
-          filter_pattern: "go.mod|go.sum|.*_test.go|.*.md|.*.golden|.*.yml"
+          xs_max_size: '10'
+          s_max_size: '100'
+          m_max_size: '500'
+          l_max_size: '1000'
+          exclude_files: "(?<extention>.txt|.gen.go|.md)$"
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
