@@ -13,10 +13,10 @@ jobs:
     steps:
       - uses: coverwallet/pr-labeler@1a5c0583667b81085703b679d88a56e08e0482a2
         with:
-          xs_max_size: '10'
-          s_max_size: '100'
-          m_max_size: '500'
-          l_max_size: '1000'
-          exclude_files: "(?<extention>.txt|.gen.go|.md|go.sum|go.mod)$"
+          xs_max_size: "10"
+          s_max_size: "100"
+          m_max_size: "500"
+          l_max_size: "1000"
+          exclude_files: "mock|(?<extention>.txt|.gen.go|.md|go.sum|go.mod)$"
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
