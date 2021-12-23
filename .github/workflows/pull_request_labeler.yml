@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     name: Label the PR size
     steps:
-      - uses: MokkeMeguru/pr-labeler@c943f7a5f126bc0acac246653fae707cda6c19ae
+      - uses: MokkeMeguru/pr-labeler@71c085cd4954b41ab8041430b18497dea38ac7eb
         with:
-          xs_max_size: '10'
-          s_max_size: '100'
-          m_max_size: '500'
-          l_max_size: '1000'
-          exclude_files: "(?<extention>.txt|.gen.go|.md|go.sum|go.mod)$"
+          xs_max_size: "10"
+          s_max_size: "100"
+          m_max_size: "500"
+          l_max_size: "1000"
+          exclude_files: "mock|(?<extention>.txt|.gen.go|.md|go.sum|go.mod)$"
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
