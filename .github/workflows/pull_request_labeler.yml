@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Label the PR size
     steps:
-      - uses: coverwallet/pr-labeler@1a5c0583667b81085703b679d88a56e08e0482a2
+      - uses: MokkeMeguru/pr-labeler@970efb45d30926023e2d73494129c6687b5ac5ea
         with:
           xs_max_size: "10"
           s_max_size: "100"
