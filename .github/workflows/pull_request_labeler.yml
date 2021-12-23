@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Label the PR size
     steps:
-      - uses: MokkeMeguru/pr-labeler@970efb45d30926023e2d73494129c6687b5ac5ea
+      - uses: MokkeMeguru/pr-labeler@f18b6566cc974faf0df4e2c8667c97e782e381ab
         with:
           xs_max_size: "10"
           s_max_size: "100"
